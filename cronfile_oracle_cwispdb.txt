@@ -1,0 +1,15 @@
+#
+#
+# -- owner: oracle
+#
+# Parameters are:
+#
+# minute  hour  day_of_month  month  weekday  command
+#  0-59   0-23     1-31        1-12    0-6
+#                                    Sun-Sat
+#=================================================================
+#
+# - RMAN hot backup
+03 00 * * * /home/oracle/SNC_Backup_Process/SNC_RMAN_Backups.shl > /tmp/TodRMANBackup.txt 2>&1
+55 00 * * * /home/oracle/SNC_Backup_Process/SNC_RMAN_Clone_CWIS8CLN_Master.shl > /home/oracle/SNC_Backup_Process/SNC_RMAN_Clone_CWIS8CLN_xResults.txt 2>&1
+#30 21 23 9 5 /home/oracle/eddie/analyze.shl > /home/oracle/eddie/analyze.txt 2>&1

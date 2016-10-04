@@ -1,0 +1,1 @@
+11 * * * * /usr/local/snc/bin/syncsnc > /tmp/syncsnc.cron 2>&1

@@ -1,0 +1,11 @@
+#
+# -- owner: banner
+#
+
+#
+# -- ITSEA DBA Scripts
+#
+13 01 * * * /home/banner/SNC_Management_Scripts/Cloning_Backup_BannerHome_Production.shl > /tmp/ITSEA_Cloning_Backup_banner.txt 2>&1
+00 20 * * * /storage/Production_Scripts/AR_Scripts/AR_Move_Statements_Master.shl > /tmp/AR_Move_Statements_Master.txt 2>&1
+# per Carl 12-28-2015 00 6-19 * * * /storage/u01/apps/banner/banCWIS8P/sncscripts/Reg_FixCourseCounts.shl > /tmp/Reg_FixCourseCounts.txt 2>&1
+

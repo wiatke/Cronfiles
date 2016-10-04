@@ -1,0 +1,679 @@
+# owner sworker
+#
+# -- Academic Support
+#
+# NOTE: No scripts can run at during the following times
+#            8:00am   to 8:30am
+#           12:00noon to 12:30pm
+#            6:10pm   to 6:25pm
+
+10 08 * * * /storage/Production_Scripts/AcadSS_Scripts/AcadSS_ParameterText_Moving_Master.shl > /tmp/tempAcadSSParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/AcadSS_Scripts/AcadSS_ParameterText_Moving_Master.shl > /tmp/tempAcadSSParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/AcadSS_Scripts/AcadSS_ParameterText_Moving_Master.shl > /tmp/tempAcadSSParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/AcadSS_Scripts/AcadSS_ParameterText_Moving_Master.shl > /tmp/tempAcadSSParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/AcadSS_Scripts/AcadSS_ParameterText_Moving_Master.shl > /tmp/tempAcadSSParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/AcadSS_Scripts/AcadSS_ParameterText_Moving_Master.shl > /tmp/tempAcadSSParm.txt 2>&1
+
+00 19 * * * /storage/Production_Scripts/AcadSS_Scripts/AcadSS_Build_Disa_Master.shl > /dev/null 2>&1
+00 20 * * * /storage/Production_Scripts/AcadSS_Scripts/AcadSS_Update_FinalGrade_SGADISA_Master.shl > /dev/null 2>&1
+
+#
+# -- Accounts Receivables
+#
+#
+# -- Bursar Office (AR) see/update project number xxxx if you are putting in a job that will run or starts after 8:00pm or
+#                   or starts before 6:00am.
+# NOTE: No scripts can run at during the following times
+#            8:00am   to 8:30am
+#           12:00noon to 12:30pm
+#            6:10pm   to 6:25pm
+#
+
+10 08 * * * /storage/Production_Scripts/AR_Scripts/AR_ParameterText_Moving_Master.shl > /tmp/todARParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/AR_Scripts/AR_ParameterText_Moving_Master.shl > /tmp/todARParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/AR_Scripts/AR_ParameterText_Moving_Master.shl > /tmp/todARParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/AR_Scripts/AR_ParameterText_Moving_Master.shl > /tmp/todARParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/AR_Scripts/AR_ParameterText_Moving_Master.shl > /tmp/todARParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/AR_Scripts/AR_ParameterText_Moving_Master.shl > /tmp/todARParm.txt 2>&1
+
+#13 18 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_Perkins_MPN_Master.shl
+#23 18 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_Perkins_Schedule_Master.shl
+#45 10 * * 1,2,3,4,5,6 /storage/Production_Scripts/AR_Scripts/Process_AR_Scripts_from_Outside_Areas.shl
+#16 15 * * 1,2,3,4,5,6 /storage/Production_Scripts/AR_Scripts/Process_AR_Scripts_from_Outside_Areas.shl
+16 11 * * 1,2,3,4,5,6 /storage/Production_Scripts/AR_Scripts/AR_Update_TGACPRF_Master.shl > /dev/null 2>&1
+30 17 * * 1,2,3,4,5,6 /storage/Production_Scripts/AR_Scripts/AR_Update_TGACPRF_Master.shl > /dev/null 2>&1
+33 12 * * 2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_TMS_Payments_Master.shl > /dev/null 2>&1
+06 07-23 * * * /storage/Production_Scripts/AR_Scripts/AR_SallieMae_Payments_Master.shl > /dev/null 2>&1
+36 07-23 * * * /storage/Production_Scripts/AR_Scripts/AR_SallieMae_Payments_Master.shl > /dev/null 2>&1
+59 11 * * * /storage/Production_Scripts/AR_Scripts/AR_Transcript_Holds_Master.shl > /dev/null 2>&1
+59 05 * * * /storage/Production_Scripts/AR_Scripts/AR_Transcript_Holds_Master.shl > /dev/null 2>&1
+59 17 * * * /storage/Production_Scripts/AR_Scripts/AR_Transcript_Holds_Master.shl > /dev/null 2>&1
+59 23 * * * /storage/Production_Scripts/AR_Scripts/AR_Transcript_Holds_Master.shl > /dev/null 2>&1
+00 06-22 * * * /storage/Production_Scripts/AR_Scripts/AR_AcctRecv_Holds_Master.shl > /dev/null 2>&1
+30 06-22 * * * /storage/Production_Scripts/AR_Scripts/AR_AcctRecv_Holds_Master.shl > /dev/null 2>&1
+# Per Cheryl 12-17-2014 03 00 * * * /storage/Production_Scripts/AR_Scripts/AR_Late_Fee_Reset_Master.shl > /dev/null 2>&1
+03 10 * * 1,2,3,4,5 /storage/Production_Scripts/Childcare_Scripts/CHILDC_CareFees_Load_Master.shl > /dev/null 2>&1
+03 12 * * 1,2,3,4,5 /storage/Production_Scripts/Childcare_Scripts/CHILDC_CareFees_Load_Master.shl > /dev/null 2>&1
+03 15 * * 1,2,3,4,5 /storage/Production_Scripts/Childcare_Scripts/CHILDC_CareFees_Load_Master.shl > /dev/null 2>&1
+45 11 * * 1,2,3,4,5 /storage/Production_Scripts/Childcare_Scripts/CHILDC_CareFees_Email_Master.shl > /dev/null 2>&1
+45 17 * * 1,2,3,4,5 /storage/Production_Scripts/Childcare_Scripts/CHILDC_CareFees_Email_Master.shl > /dev/null 2>&1
+04 16 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_LateFees_Post_Master.shl > /dev/null 2>&1
+02 08 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_Manual_Corrections_Master.shl > /dev/null 2>&1
+02 10 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_Manual_Corrections_Master.shl > /dev/null 2>&1
+02 12 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_Manual_Corrections_Master.shl > /dev/null 2>&1
+02 14 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_Manual_Corrections_Master.shl > /dev/null 2>&1
+02 16 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_Manual_Corrections_Master.shl > /dev/null 2>&1
+02 18 * * 1,2,3,4,5 /storage/Production_Scripts/AR_Scripts/AR_Manual_Corrections_Master.shl > /dev/null 2>&1
+30 11 * * * /storage/Production_Scripts/AR_Scripts/AR_Ebill_Master.shl > /dev/null 2>&1
+30 15 * * * /storage/Production_Scripts/AR_Scripts/AR_Ebill_Master.shl > /dev/null 2>&1
+30 18 * * * /storage/Production_Scripts/AR_Scripts/AR_Ebill_Master.shl > /dev/null 2>&1
+50 10 5-20 * * /storage/Production_Scripts/AR_Scripts/AR_Gas_Electric_File_Transfer.shl > /dev/null 2>&1
+50 14 5-20 * * /storage/Production_Scripts/AR_Scripts/AR_Gas_Electric_File_Transfer.shl > /dev/null 2>&1
+05 11 5-20 * * /storage/Production_Scripts/AR_Scripts/AR_Gas_Electric_Master.shl > /dev/null 2>&1
+05 15 5-20 * * /storage/Production_Scripts/AR_Scripts/AR_Gas_Electric_Master.shl > /dev/null 2>&1
+
+#
+# -- Accounts Payable
+#
+
+29 10 * * 1,2,3,4,5,6 /storage/Production_Scripts/AP_Scripts/AP_BankRecon_Master.shl > /tmp/todApRecon.txt 2>&1
+29 18 * * 1,2,3,4,5 /storage/Production_Scripts/AP_Scripts/PAY_BankRecon_Master.shl > /dev/null 2>&1
+
+#
+# -- Athletics
+#
+
+14 13 * * * /storage/Production_Scripts/Athletic_Scripts/ATH_GAP_Insurance_Charge_Master.shl > /dev/null 2>&1
+14 20 * * * /storage/Production_Scripts/Athletic_Scripts/ATH_GAP_Insurance_Charge_Master.shl > /dev/null 2>&1
+
+#
+# -- College Advancement
+#
+
+# tmm remove13 12 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Prospects_Load_Master.shl > /dev/null 2>&1
+# tmm remove13 20 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Prospects_Load_Master.shl > /dev/null 2>&1
+# tmm turn off for Jitterbit testing 14 18 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Employees_Build_Master.shl > /dev/null 2>&1
+13 21 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Salutation_Build_Master.shl > /dev/null 2>&1
+43 21 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_STUD_Clean_Master.shl > /dev/null 2>&1
+33 21 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Copy_Ath_RegToAdv_Master.shl > /dev/null 2>&1
+43 21 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Activity_Cleanup_Master.shl > /dev/null 2>&1
+43 15 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Scholarship_Concat_Master.shl > /dev/null 2>&1
+01 12 1-7 * 6 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Copy_CommServToAdv_Master.shl > /dev/null 2>&1
+# kew every 15 minutes mass gift load needed for All Hands On Deck Day only, normal is noon daily
+#00 * * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Load_SFMASSGIFT_Master.shl > /dev/null 2>&1
+#15 * * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Load_SFMASSGIFT_Master.shl > /dev/null 2>&1
+#30 * * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Load_SFMASSGIFT_Master.shl > /dev/null 2>&1
+#45 * * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Load_SFMASSGIFT_Master.shl > /dev/null 2>&1
+00 12 * * 1,2,3,4,5 /storage/Production_Scripts/ColAdv_Scripts/ColAdv_Load_SFMASSGIFT_Master.shl > /dev/null 2>&1
+
+#
+# -- Campus Card
+#
+# Parameter Moving Process
+# Note: No scripts can run during the following times:
+#             8:00am     to 8:30am
+#            12 noon     to 12:30pm
+#             6:10pm     to 6:25pm
+#
+
+10 08 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_ParameterText_Moving_Master.shl > /tmp/CampusCardParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_ParameterText_Moving_Master.shl > /tmp/CampusCardParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_ParameterText_Moving_Master.shl > /tmp/CampusCardParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_ParameterText_Moving_Master.shl > /tmp/CampusCardParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_ParameterText_Moving_Master.shl > /tmp/CampusCardParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_ParameterText_Moving_Master.shl > /tmp/CampusCardParm.txt 2>&1
+35 14 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_ParameterText_Moving_Master.shl > /tmp/CampusCardParm.txt 2>&1
+         
+#O11G 34 18 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/CampusCard_Scripts/CampC_Meals_NewStudents_Master.shl > /dev/null 2>&1
+04 16 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_Build_MealsPlan_Records_Master.shl > /dev/null 2>&1
+34 18 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_Update_MealsPlans_Term_Master.shl > /dev/null 2>&1
+33 15 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_Verify_Photos_Master.shl > /dev/null 2>&1
+#36 18 * * * /storage/Production_Scripts/CampusCard_Scripts/CampC_Meals_Push_Fall_Spring_Master.shl > /dev/null 2>&1
+
+#
+# -- Campus Safety
+#
+# Parameter Moving Process
+# NOTE: No scripts can run at during the following times
+#            8:00am   to 8:30am
+#           12:00noon to 12:30pm
+#            6:10pm   to 6:25pm
+#
+
+10 08 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_ParameterText_Moving_Master.shl > /tmp/todCampusSafetyParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_ParameterText_Moving_Master.shl > /tmp/todCampusSafetyParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_ParameterText_Moving_Master.shl > /tmp/todCampusSafetyParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_ParameterText_Moving_Master.shl > /tmp/todCampusSafetyParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_ParameterText_Moving_Master.shl > /tmp/todCampusSafetyParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_ParameterText_Moving_Master.shl > /tmp/todCampusSafetyParm.txt 2>&1
+
+13 13 * * * /storage/Production_Scripts/CampusSafe_Scripts/CS_Campus_Notification_Master_Script.shl > /dev/null 2>&1
+13 18 * * * /storage/Production_Scripts/CampusSafe_Scripts/CS_Campus_Notification_Master_Script.shl > /dev/null 2>&1
+13 01 * * 0,1,2,3,4,6 /storage/Production_Scripts/CampusSafe_Scripts/CS_Campus_Notification_Master_Script.shl > /dev/null 2>&1
+03 00 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/CampusSafe_Scripts/CampusS_Vehicle_Reg_Master.shl > /dev/null 2>&1
+33 00 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/CampusSafe_Scripts/CampusS_Process_Sticker_AR_Master.shl > /dev/null 2>&1
+33 12 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_Tickets_AR_Master.shl > /dev/null 2>&1
+33 00 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_Tickets_AR_Master.shl > /dev/null 2>&1
+# tod 13 02 13 09 * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_Emergency_MissingPerson_Master.shl > /dev/null 2>&1
+# tod 13 05 13 09 * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_Emergency_CENS_Master.shl > /dev/null 2>&1
+30 06 * * * /storage/Production_Scripts/CampusSafe_Scripts/CampusS_Move_Profile_Reports_Master.shl > /dev/null 2>&1
+
+#
+# -- Copy Center and Mailroom
+#
+
+13 11 * * 1,2,3,4,5 /storage/Production_Scripts/CopyCenter_Scripts/CopyC_Dept_Charges_Master.shl > /dev/null 2>&1
+13 15 * * 1,2,3,4,5 /storage/Production_Scripts/CopyCenter_Scripts/CopyC_Dept_Charges_Master.shl > /dev/null 2>&1
+04 07-21 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/CopyCenter_Scripts/MailRoom_SuiteNumbers_Used_Master.shl > /dev/null 2>&1
+
+
+#
+# -- Education
+#
+
+33 18 * * * /storage/Production_Scripts/Education_Scripts/Educa_LiveText_Master.shl > /dev/null 2>&1
+
+#
+# -- Finance scripts
+#
+13 18 * * * /storage/Production_Scripts/Finance_Scripts/Fin_Printing_Copy_FOAPAL_Master.shl > /dev/null 2>&1
+00 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess06.txt 2>&1
+05 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess06.txt 2>&1
+10 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess06.txt 2>&1
+15 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess12.txt 2>&1
+20 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess12.txt 2>&1
+25 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess12.txt 2>&1
+30 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess18.txt 2>&1
+35 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess18.txt 2>&1
+40 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess18.txt 2>&1
+45 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess24.txt 2>&1
+50 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess24.txt 2>&1
+55 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_Master.shl > /tmp/JEProcess24.txt 2>&1
+05 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_NonF_Master.shl > /tmp/JEProcess24.txt 2>&1
+20 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_NonF_Master.shl > /tmp/JEProcess24.txt 2>&1
+35 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_NonF_Master.shl > /tmp/JEProcess24.txt 2>&1
+50 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/Fin_JE_Posting_NonF_Master.shl > /tmp/JEProcess24.txt 2>&1
+13 07 * * 1,2,3,4,5,6 /storage/Production_Scripts/Finance_Scripts/Fin_Follett_Transaction_Processing_Master.shl > /dev/null 2>&1
+00 07-18 * * 2,4 /storage/Production_Scripts/Finance_Scripts/FIN_APDirDep_Move_to_JDrive.shl > /dev/null 2>&1
+15 07-18 * * 2,4 /storage/Production_Scripts/Finance_Scripts/FIN_APDirDep_Move_to_JDrive.shl > /dev/null 2>&1
+30 07-18 * * 2,4 /storage/Production_Scripts/Finance_Scripts/FIN_APDirDep_Move_to_JDrive.shl > /dev/null 2>&1
+45 07-18 * * 2,4 /storage/Production_Scripts/Finance_Scripts/FIN_APDirDep_Move_to_JDrive.shl > /dev/null 2>&1
+05 07-18 * * 1,3,5 /storage/Production_Scripts/Finance_Scripts/FIN_APDirDep_Move_to_JDrive.shl > /dev/null 2>&1
+05 13 * * * /storage/Production_Scripts/Finance_Scripts/FIN_BuyersApprovedPurchaseOrdersEmail.shl > /dev/null 2>&1
+05 01 * * * /storage/Production_Scripts/Finance_Scripts/FIN_BuyersApprovedPurchaseOrdersEmail.shl > /dev/null 2>&1
+15 01 * * * /storage/Production_Scripts/Finance_Scripts/Fin_PurchaseOrdersForApprovalEmail.shl > /dev/null 2>&1
+13 06-14 * 1-2 1,2,3,4,5 /storage/Production_Scripts/Finance_Scripts/FIN_1099_Moved_to_JDrive.shl > /dev/null 2>&1
+
+#
+# -- Financial Aid  see/update project number 2030 if you are putting in a job that will run or starts after 8:00pm or
+#                   or starts before 6:00am.
+# NOTE: No scripts can run at during the following times
+#            8:00am   to 8:30am
+#           12:00noon to 12:30pm
+#            6:00pm   to 6:30pm
+#
+
+10 08 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_ParameterText_Moving_Master.shl > /tmp/todFinAidParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_ParameterText_Moving_Master.shl > /tmp/todFinAidParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_ParameterText_Moving_Master.shl > /tmp/todFinAidParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_ParameterText_Moving_Master.shl > /tmp/todFinAidParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_ParameterText_Moving_Master.shl > /tmp/todFinAidParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_ParameterText_Moving_Master.shl > /tmp/todFinAidParm.txt 2>&1
+
+13 18 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_Intro_Email_Master.shl > /dev/null 2>&1
+23 18 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_Intro_NotAdmitted_Email_Master.shl > /dev/null 2>&1
+
+05 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIR_from_J.shl > /tmp/todisir.txt 2>&1
+15 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIR_from_J.shl > /tmp/todisir.txt 2>&1
+25 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIR_from_J.shl > /tmp/todisir.txt 2>&1
+35 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIR_from_J.shl > /tmp/todisir.txt 2>&1
+45 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIR_from_J.shl > /tmp/todisir.txt 2>&1
+55 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIR_from_J.shl > /tmp/todisir.txt 2>&1
+07 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIRErrorDf_to_J.shl > /tmp/todisir.txt 2>&1
+17 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIRErrorDf_to_J.shl > /tmp/todisir.txt 2>&1
+27 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIRErrorDf_to_J.shl > /tmp/todisir.txt 2>&1
+37 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIRErrorDf_to_J.shl > /tmp/todisir.txt 2>&1
+47 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIRErrorDf_to_J.shl > /tmp/todisir.txt 2>&1
+57 6-22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/FinAid_Scripts/FinAid_ISIRErrorDf_to_J.shl > /tmp/todisir.txt 2>&1
+15 6-22 * * * /storage/Production_Scripts/FinAid_Scripts/StHR_Scripts/FinA_SPAY_Create_SSContracts_Master-v4.shl > /dev/null 2>&1
+30 6-22 * * * /storage/Production_Scripts/FinAid_Scripts/StHR_Scripts/FinA_SPAY_Create_SSContracts_Master-v4.shl > /dev/null 2>&1
+48 6-22 * * * /storage/Production_Scripts/FinAid_Scripts/StHR_Scripts/FinA_SPAY_Create_SSContracts_Master-v4.shl > /dev/null 2>&1
+59 6-22 * * * /storage/Production_Scripts/FinAid_Scripts/StHR_Scripts/FinA_SPAY_Create_SSContracts_Master-v4.shl > /dev/null 2>&1
+00 20 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_NYUD_Master.shl > /dev/null 2>&1
+15 12 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_NYUD_Master.shl > /dev/null 2>&1
+00 06 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_NYUD_Master.shl > /dev/null 2>&1
+00 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+05 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+10 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+15 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+20 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+25 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+30 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+35 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+40 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+45 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+50 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+55 7-22 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Recv_Process.shl > /tmp/todcodfromJ.txt 2>&1
+00 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+05 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+10 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+15 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+20 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+25 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+30 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+35 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+40 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+45 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+50 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+55 7-23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_COD_Send_Process.shl > /tmp/todcodtoJ.txt 2>&1
+00 9-16 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_IDR_Process_Master.shl > /dev/null 2>&1
+05 11 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/Finaid_Exit_Notify_Master.shl > /dev/null 2>&1
+05 15 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/Finaid_Exit_Notify_Master.shl > /dev/null 2>&1
+30 9-16 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_IDR_Process_Master.shl > /dev/null 2>&1
+# tod on 02-03-2014  22 10 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_Scholarship_From_ADM_Master.shl > /dev/null 2>&1
+15 15 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_Update_PromissaryNotes_Status_Master.shl > /dev/null 2>&1
+55 15 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_Award_Notify_Email_ContStud_Master.shl > /dev/null 2>&1
+50 15 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_Award_Notify_Email_NewStud_Master.shl > /dev/null 2>&1
+03 19 * * * /storage/Production_Scripts/FinAid_Scripts/StHR_Scripts/FinA_StPay_Build_KL_Approvers_Master.shl > /dev/null 2>&1
+31 19 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_Email_Seq_General_Master.shl > /dev/null 2>&1
+30 20 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_Missing_Information_TC_Notice_Master.shl > /dev/null 2>&1
+13 23 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/StHR_Scripts/FinA_StPay_Report_Master.shl > /dev/null 2>&1
+30 23 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_IDR_Process_Master.shl > /dev/null 2>&1
+35 23 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_Missing_Information_Notice_Master.shl > /dev/null 2>&1
+45 23 * * 1,2,3,4,5 /storage/Production_Scripts/FinAid_Scripts/FinAid_Missing_Information_Reminder_Master.shl > /dev/null 2>&1
+45 23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_Notification_Loan_Distbursement_Master.shl > /dev/null 2>&1
+47 23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_Notification_PLUS_Distbursement_Master.shl > /dev/null 2>&1
+49 23 * * * /storage/Production_Scripts/FinAid_Scripts/FinAid_Notification_TEACH_Distbursement_Master.shl > /tmp/todFinAid_Notification_TEACH_Distbursement_Master.txt 2>&1 
+47 23 * * 2 /storage/Production_Scripts/FinAid_Scripts/FinAid_WIVoucher_Data_File_Master.shl > /dev/null 2>&1
+# 47 23 19 08 * /storage/Production_Scripts/FinAid_Scripts/FinAid_WIVoucher_Data_File_Master.shl > /dev/null 2>&1
+
+#
+# -- Follett
+#
+
+13 05 * * * /storage/Production_Scripts/Follett_Scripts/Follett_BuildDf_Master.shl > /tmp/todfollett.txt 2>&1
+
+#
+# -- Health Center
+#
+
+10 08 * * * /storage/Production_Scripts/Health_Center_Scripts/HealthCenter_ParameterText_Moving_Master.shl > /tmp/todHCParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/Health_Center_Scripts/HealthCenter_ParameterText_Moving_Master.shl > /tmp/todHCParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/Health_Center_Scripts/HealthCenter_ParameterText_Moving_Master.shl > /tmp/todHCParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/Health_Center_Scripts/HealthCenter_ParameterText_Moving_Master.shl > /tmp/todHCParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/Health_Center_Scripts/HealthCenter_ParameterText_Moving_Master.shl > /tmp/todHCParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/Health_Center_Scripts/HealthCenter_ParameterText_Moving_Master.shl > /tmp/todHCParm.txt 2>&1
+
+03 01 * * 0,1,2,3,4,5 /storage/Production_Scripts/Health_Center_Scripts/HC_Medicat_DataFile_Master.shl > /dev/null 2>&1
+13 07 * * * /storage/Production_Scripts/Health_Center_Scripts/HC_Insurance_Update_Master.shl > /dev/null 2>&1
+13 07 1 9,10,11,12,1,2,3,4,5 * /storage/Production_Scripts/Health_Center_Scripts/HC_Health101_Email_Master.shl > /dev/null 2>&1
+00 09 * * 6 /storage/Production_Scripts/Health_Center_Scripts/HC_Medicat_AR_DataFile_Review_Master.shl > /dev/null 2>&1
+30 00 * * 1,2,3,4,5 /storage/Production_Scripts/Health_Center_Scripts/HC_Medicat_AR_DataFile_Master.shl > /dev/null 2>&1
+01 18 * * 0,1,2,3,4,5 /storage/Production_Scripts/Health_Center_Scripts/HC_RX_EmailNotice_Master.shl > /dev/null 2>&1
+
+#
+# -- Human Resources and Payroll scripts
+#
+00 07 * * 1,2,3,4,5 /storage/Production_Scripts/HRP_Scripts/HR_Move_phrafca_to_J.shl > /dev/null 2>&1
+00 11 * * 1,2,3,4,5 /storage/Production_Scripts/HRP_Scripts/HR_Move_phrafca_to_J.shl > /dev/null 2>&1
+00 16 * * 1,2,3,4,5 /storage/Production_Scripts/HRP_Scripts/HR_Move_phrafca_to_J.shl > /dev/null 2>&1
+13 18 * * * /storage/Production_Scripts/HRP_Scripts/HR_Peaempl_Students_LastWorkDate_Master.shl > /dev/null 2>&1
+#15 18 * * * /storage/Production_Scripts/HRP_Scripts/HR_Nbajobs_Students_Enddate_Master.shl > /dev/null 2>&1
+#19 18 * * * /storage/Production_Scripts/HRP_Scripts/HR_Nbajobs_Employee_Enddate_Master.shl > /dev/null 2>&1
+13 18 * * 1,2,3,4,5 /storage/Production_Scripts/HRP_Scripts/HR_ING_STD_Eligibility_Master.shl > /dev/null 2>&1
+13 00 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/HRP_Scripts/HR_Birthday_Email_Master.shl > /dev/null 2>&1
+13 22 * * 1,2,3,4,5 /storage/Production_Scripts/HRP_Scripts/HR_Tenure_Code_Update_Master.shl > /dev/null 2>&1
+# 30 20 * * * /storage/Production_Scripts/Payroll_Scripts/HRP_TS_Process.shl > /dev/null 2>&1
+# 35 20 * * * /storage/Production_Scripts/Payroll_Scripts/StudentTS_ProcessAll.shl > /dev/null 2>&1
+# 15 23 * * * /export/home/sworker/Production_Scripts/B2A_ProcessAll.shl > /dev/null 2>&1
+# tmm 50 7-17 * * * /sworker/Production_Scripts/Payroll_Scripts/HRP_Push_into_Banner.shl > /dev/null 2>&1
+13 18 * * 3,4,5 /storage/Production_Scripts/Payroll_Scripts/Pay_Deductions_To_AR_Master.shl > /dev/null 2>&1
+13 10 * * 4,5 /storage/Production_Scripts/Payroll_Scripts/Pay_Deductions_To_AR_Master.shl > /dev/null 2>&1
+# Not Using15 11 * * 1,2 /storage/Production_Scripts/Payroll_Scripts/PAY_FoodServ_TimeSheet_Master.shl > /dev/null 2>&1
+# Not Using15 13 * * 1,2 /storage/Production_Scripts/Payroll_Scripts/PAY_FoodServ_TimeSheet_Master.shl > /dev/null 2>&1
+15 10 * * 1,2,3,4,5 /storage/Production_Scripts/Payroll_Scripts/PAY_TiaaCref_DF_Master.shl > /dev/null 2>&1
+15 11 * * 1,2,3,4,5 /storage/Production_Scripts/Payroll_Scripts/PAY_TiaaCref_DF_Master.shl > /dev/null 2>&1
+15 13 * * 1,2,3,4,5 /storage/Production_Scripts/Payroll_Scripts/PAY_TiaaCref_DF_Master.shl > /dev/null 2>&1
+15 15 * * 1,2,3,4,5 /storage/Production_Scripts/Payroll_Scripts/PAY_TiaaCref_DF_Master.shl > /dev/null 2>&1
+15 18 * * 1,2,3,4,5 /storage/Production_Scripts/Payroll_Scripts/PAY_TiaaCref_DF_Master.shl > /dev/null 2>&1
+53 05 * * * /storage/Production_Scripts/Payroll_Scripts/Payroll_AuxServ_ClockOut_Email_Master.shl > /dev/null 2>&1
+30 11 * * 7 /storage/Production_Scripts/Payroll_Scripts/Payroll_AuxServ_TimeClock_Close_Master.shl > /dev/null 2>&1
+13 06 * * * /storage/Production_Scripts/Payroll_Scripts/PayPcntrl_TimeSheet_Email_Ee_Master.shl > /dev/null 2>&1
+59 09 * * 1 /storage/Production_Scripts/Payroll_Scripts/PayPcntrl_TimeSheet_Email_Ee_Master.shl > /dev/null 2>&1
+11 10 * * 1 /storage/Production_Scripts/Payroll_Scripts/PayPcntrl_TimeSheet_Email_Ee_Master.shl > /dev/null 2>&1
+33 06 * * * /storage/Production_Scripts/Payroll_Scripts/PayPcntrl_TimeSheet_Email_Supervisor_Master.shl > /dev/null 2>&1
+13 10 * * 1 /storage/Production_Scripts/Payroll_Scripts/PayPcntrl_TimeSheet_Email_Supervisor_Master.shl > /dev/null 2>&1
+13 11 * * 7 /storage/Production_Scripts/Payroll_Scripts/PayPcntrl_TimeSheet_Email_Supervisor_Master.shl > /dev/null 2>&1
+13 06 * * * /storage/Production_Scripts/Payroll_Scripts/PayPcntr_Timesheet_NotStarted_Email_Master.shl > /dev/null 2>&1
+55 23 * * * /storage/Production_Scripts/Payroll_Scripts/PAY_TimeSheets_Clear_ZeroHrs_Master.shl > /dev/null 2>&1
+30 08 * * * /storage/Production_Scripts/Payroll_Scripts/Pay_WI_Quarter_Unemployment_Master.shl > /dev/null 2>&1
+30 11 * * * /storage/Production_Scripts/Payroll_Scripts/Pay_WI_Quarter_Unemployment_Master.shl > /dev/null 2>&1
+30 13 * * * /storage/Production_Scripts/Payroll_Scripts/Pay_WI_Quarter_Unemployment_Master.shl > /dev/null 2>&1
+30 15 * * * /storage/Production_Scripts/Payroll_Scripts/Pay_WI_Quarter_Unemployment_Master.shl > /dev/null 2>&1
+30 08 * * 0 /storage/Production_Scripts/Payroll_Scripts/PayPcntrl_AuxServ_Overtime_Master.shl > /dev/null 2>&1
+13 01 * * * /storage/Production_Scripts/Payroll_Scripts/PayPcntrl_GTVSDAX_Update_Master.shl > /dev/null 2>&1
+13 06-16 * 1-2 1,2,3,4,5 /storage/Production_Scripts/Payroll_Scripts/Pay_W2DataFiles_PXRW2_Move_to_JDrive.shl > /dev/null 2>&1
+13 06-16 * 1-2 1,2,3,4,5 /storage/Production_Scripts/Payroll_Scripts/Pay_W2DataFiles_W2REPORT_Move_to_JDrive.shl > /dev/null 2>&1
+00 09 * * * /storage/Production_Scripts/Payroll_Scripts/Payroll_Holiday_Insert_Master.shl > /dev/null 2>&1
+
+#
+# -- Institutional Effectiveness (OIE) see/update project number xxxx if you are putting in a job that will run or starts after 8:00pm or
+#                   or starts before 6:00am.
+# NOTE: No scripts can run at during the following times
+#            8:00am   to 8:30am
+#           12:00noon to 12:30pm
+#            6:00pm   to 6:30pm
+#
+
+10 08 * * * /storage/Production_Scripts/OIE_Scripts/OIE_ParameterText_Moving_Master.shl > /tmp/todOIEParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/OIE_Scripts/OIE_ParameterText_Moving_Master.shl > /tmp/todOIEParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/OIE_Scripts/OIE_ParameterText_Moving_Master.shl > /tmp/todOIEParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/OIE_Scripts/OIE_ParameterText_Moving_Master.shl > /tmp/todOIEParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/OIE_Scripts/OIE_ParameterText_Moving_Master.shl > /tmp/todOIEParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/OIE_Scripts/OIE_ParameterText_Moving_Master.shl > /tmp/todOIEParm.txt 2>&1
+
+#
+00 10 * * * /storage/Production_Scripts/OIE_Scripts/OIE_CourseEval_0Markup_Master.shl > /dev/null 2>&1
+00 10 * * * /storage/Production_Scripts/OIE_Scripts/OIE_CourseEval_1Master_LoadBase.shl > /dev/null 2>&1
+00 13 * * * /storage/Production_Scripts/OIE_Scripts/OIE_CourseEval_2Master_LoadLinks.shl > /dev/null 2>&1
+13 01 * * * /storage/Production_Scripts/OIE_Scripts/OIE_CourseEval_3Master_EmailLinks.shl > /dev/null 2>&1
+01 18 * * * /storage/Production_Scripts/OIE_Scripts/OIE_CourseEval_4Master_EmailReminder.shl > /dev/null 2>&1
+10 07 * * * /storage/Production_Scripts/OIE_Scripts/OIE_CourseEval_5Master_FacultyReminder_Advance.shl > /dev/null 2>&1
+35 18 * * * /storage/Production_Scripts/OIE_Scripts/OIE_CourseEval_5Master_FacultyReminder.shl > /dev/null 2>&1
+45 16 * * * /storage/Production_Scripts/OIE_Scripts/OIE_CourseEval_6Master_DataResultsLoad.shl > /dev/null 2>&1
+03 23 * * 0,1,2,3,4 /storage/Production_Scripts/OIE_Scripts/OIE_ProjNo511.shl > /dev/null 2>&1
+03 22 * * 0,1,2,3,4 /storage/Production_Scripts/OIE_Scripts/OIE_ProjNo511_Registered.shl > /dev/null 2>&1
+03 21 * * 0,1,2,3,4,5 /storage/Production_Scripts/OIE_Scripts/OIE_Track_GPA_History_Master.shl > /dev/null 2>&1
+30 20 * * 1,2,3,4,5 /storage/Production_Scripts/OIE_Scripts/OIE_WAICU_LDS_Pre_Master.shl > /dev/null 2>&1
+30 20 * * 1,2,3,4,5 /storage/Production_Scripts/OIE_Scripts/OIE_WAICU_LDS_Load_Ids_Master.shl > /dev/null 2>&1
+30 20 * * 1,2,3,4,5 /storage/Production_Scripts/OIE_Scripts/OIE_WAICU_LDS_Post_Master.shl > /dev/null 2>&1
+13 23 * * * /storage/Production_Scripts/OIE_Scripts/OIE_PowerAlert_Df_Build_Master.shl > /dev/null 2>&1
+
+#
+# -- Library Scripts
+#
+36 18 * * * /storage/Production_Scripts/Lib_Scripts/SNC_Library_Patron_Master.shl > /dev/null 2>&1
+
+#
+# -- LSI Scripts
+#
+# 36 18 * * * /storage/Production_Scripts/LSI_Scripts/LSI_Student_Orgn_Master.shl > /dev/null 2>&1
+
+# -- Students Development
+
+13 23 * * 0,1,2,3,4,5 /storage/Production_Scripts/StudDev_Scripts/StDv_Pharos_Df_Build_Master.shl > /storage/Production_Scripts/StudDev_Scripts/StDv_Pharos_Df_Build_Master_Dump.txt 2>&1
+
+#
+# -- Telcom Scripts
+#
+45 22 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/Telcom/Telcom_Dept_Phone_Charges_Post_Master.shl > /dev/null 2>&1
+
+#
+# -- Registrar Scripts
+#
+
+#
+# -- Registrar Office (REG) see/update project number xxxx if you are putting in a job that will run or starts after 8:00pm or
+#                   or starts before 6:00am.
+# NOTE: No scripts can run at during the following times
+#            8:00am   to 8:30am
+#           12:00noon to 12:30pm
+#            6:00pm   to 6:30pm
+#
+
+10 08 * * * /storage/Production_Scripts/REG_Scripts/REG_ParameterText_Moving_Master.shl > /tmp/todREGParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/REG_Scripts/REG_ParameterText_Moving_Master.shl > /tmp/todREGParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/REG_Scripts/REG_ParameterText_Moving_Master.shl > /tmp/todREGParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/REG_Scripts/REG_ParameterText_Moving_Master.shl > /tmp/todREGParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/REG_Scripts/REG_ParameterText_Moving_Master.shl > /tmp/todREGParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/REG_Scripts/REG_ParameterText_Moving_Master.shl > /tmp/todREGParm.txt 2>&1
+
+#
+15 15 * * 0,1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_Midterm_Master.shl > /dev/null 2>&1
+# per rick 10-30-2012 25 17 * * * /storage/Production_Scripts/REG_Scripts/REG_Transcripts_Events_Foundation_Master.shl > /dev/null 2>&1
+30 07 * * * /storage/Production_Scripts/REG_Scripts/REG_Sports_Load_Master.shl > /dev/null 2>&1
+35 11 * * * /storage/Production_Scripts/REG_Scripts/REG_Sports_Load_Master.shl > /dev/null 2>&1
+35 15 * * * /storage/Production_Scripts/REG_Scripts/REG_Sports_Load_Master.shl > /dev/null 2>&1
+35 16 * * * /storage/Production_Scripts/REG_Scripts/REG_Sports_Load_Master.shl > /dev/null 2>&1
+01 07-22 * * * /storage/Production_Scripts/REG_Scripts/REG_Test_Score_Load_Master.shl > /dev/null 2>&1
+16 07-22 * * * /storage/Production_Scripts/REG_Scripts/REG_Test_Score_Load_Master.shl > /dev/null 2>&1
+31 07-22 * * * /storage/Production_Scripts/REG_Scripts/REG_Test_Score_Load_Master.shl > /dev/null 2>&1
+46 07-22 * * * /storage/Production_Scripts/REG_Scripts/REG_Test_Score_Load_Master.shl > /dev/null 2>&1
+32 07 * * * /storage/Production_Scripts/REG_Scripts/REG_Transcripts_Events_Master.shl > /dev/null 2>&1
+37 11 * * * /storage/Production_Scripts/REG_Scripts/REG_Transcripts_Events_Master.shl > /dev/null 2>&1
+37 15 * * * /storage/Production_Scripts/REG_Scripts/REG_Transcripts_Events_Master.shl > /dev/null 2>&1
+37 16 * * * /storage/Production_Scripts/REG_Scripts/REG_Transcripts_Events_Master.shl > /dev/null 2>&1
+33 07 * * * /storage/Production_Scripts/REG_Scripts/REG_SOAHOLD_Load_Master.shl > /dev/null 2>&1
+38 11 * * * /storage/Production_Scripts/REG_Scripts/REG_SOAHOLD_Load_Master.shl > /dev/null 2>&1
+38 15 * * * /storage/Production_Scripts/REG_Scripts/REG_SOAHOLD_Load_Master.shl > /dev/null 2>&1
+38 16 * * * /storage/Production_Scripts/REG_Scripts/REG_SOAHOLD_Load_Master.shl > /dev/null 2>&1
+# put back tod 39 18 * * * /storage/Production_Scripts/REG_Scripts/REG_Move_sfrnslc_to_J.shl > /dev/null 2>&1
+05 06-20 * * * /storage/Production_Scripts/REG_Scripts/REG_Move_sfrnslc_to_J.shl > /dev/null 2>&1
+40 18 * * * /storage/Production_Scripts/REG_Scripts/REG_Move_shrigrs_to_J.shl > /dev/null 2>&1
+42 18 * * * /storage/Production_Scripts/REG_Scripts/REG_Move_shrieth_to_J.shl > /dev/null 2>&1
+45 18 * * * /storage/Production_Scripts/REG_Scripts/REG_Move_shricip_to_J.shl > /dev/null 2>&1
+45 18 * * * /storage/Production_Scripts/REG_Scripts/REG_Move_shrigrs_to_J.shl > /dev/null 2>&1
+45 11 * * * /storage/Production_Scripts/REG_Scripts/REG_Move_shrdegv_to_J.shl > /dev/null 2>&1
+45 15 * * * /storage/Production_Scripts/REG_Scripts/REG_Move_shrdegv_to_J.shl > /dev/null 2>&1
+# 56 13 03,04,05 08 * /storage/Production_Scripts/REG_Scripts/REG_Missing_Final_Grades_Master.shl > /dev/null 2>&1
+# 30 16 03,04,05 08 * /storage/Production_Scripts/REG_Scripts/REG_Missing_Final_Grades_Master.shl > /dev/null 2>&1
+13 18 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/REG_Scripts/REG_Ical_StudFac_Master.shl > /dev/null 2>&1
+# 13 23 26 07 * /storage/Production_Scripts/REG_Scripts/REG_Course_Evals_PopSel_Master.shl > /dev/null 2>&1
+#13 10 31 07 * /storage/Production_Scripts/REG_Scripts/REG_Course_Evals_Reminder_Master.shl > /dev/null 2>&1
+#13 13 31 07 * /storage/Production_Scripts/REG_Scripts/REG_Course_Evals_Reminder_Master.shl > /dev/null 2>&1
+#13 07 01,02,03,04,05 08 * /storage/Production_Scripts/REG_Scripts/REG_Course_Evals_Reminder_Master.shl > /dev/null 2>&1
+13 9-18 * * * /storage/Production_Scripts/REG_Scripts/REG_Transfer_Articulation_Master.shl > /dev/null 2>&1
+43 9-18 * * * /storage/Production_Scripts/REG_Scripts/REG_Transfer_Articulation_Master.shl > /dev/null 2>&1
+01 09 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+01 10 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+01 11 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+01 12 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+01 13 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+01 14 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+01 15 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+01 16 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+01 17 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 09 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 10 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 11 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 12 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 13 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 14 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 15 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 16 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+31 17 * * * /storage/Production_Scripts/REG_Scripts/ScheduleLoad_Scripts/REG_Schedule_Loader_Master.shl > /dev/null 2>&1
+13 15 * * * /storage/Production_Scripts/REG_Scripts/REG_AGD_Load_Master.shl > /dev/null 2>&1
+13 22 * * * /storage/Production_Scripts/REG_Scripts/REG_FERPA_IRS_Dep_Update_Master.shl > /dev/null 2>&1
+01 07-22 * * * /storage/Production_Scripts/REG_Scripts/REG_Permit_Override_Email_Master.shl > /dev/null 2>&1
+16 07-22 * * * /storage/Production_Scripts/REG_Scripts/REG_Permit_Override_Email_Master.shl > /dev/null 2>&1
+31 07-22 * * * /storage/Production_Scripts/REG_Scripts/REG_Permit_Override_Email_Master.shl > /dev/null 2>&1
+46 07-22 * * * /storage/Production_Scripts/REG_Scripts/REG_Permit_Override_Email_Master.shl > /dev/null 2>&1
+01 08-18 * * * /storage/Production_Scripts/REG_Scripts/REG_Degree_Audit_Notification_Master.shl > /dev/null 2>&1
+46 11 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_Waitlist_Action_Master.shl > /dev/null 2>&1
+46 22 * * * /storage/Production_Scripts/REG_Scripts/REG_Repeat_Monitor_StudHist_Master.shl > /dev/null 2>&1
+48 22 * * * /storage/Production_Scripts/REG_Scripts/REG_Repeat_Monitor_Transfer_Master.shl > /dev/null 2>&1
+58 20 * * * /storage/Production_Scripts/REG_Scripts/REG_Enrollment_Withdrawal_Notice_Master.shl > /dev/null 2>&1
+# Per John no longer needed 58 17 * * 1,2,4,5 /storage/Production_Scripts/REG_Scripts/REG_Lab_Operating_Agreement_Email_Master.shl > /dev/null 2>&1
+00 11 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_AltPin_Load_Master.shl > /dev/null 2>&1
+00 13 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_AltPin_Load_Master.shl > /dev/null 2>&1
+30 17 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_AltPin_Load_Master.shl > /dev/null 2>&1
+01 23 * * * /storage/Production_Scripts/REG_Scripts/REG_Grade_GPA_Courses_Master.shl > /dev/null 2>&1
+01 06 * * * /storage/Production_Scripts/REG_Scripts/REG_Moodle_Cont_Df_Master.shl > /tmp/MoodlePush0601am.txt 2>&1
+#01 12 * * * /storage/Production_Scripts/REG_Scripts/REG_Moodle_Cont_Df_Master.shl > /tmp/MoodlePush1201pm.txt 2>&1
+01 18 * * * /storage/Production_Scripts/REG_Scripts/REG_Moodle_Cont_Df_Master.shl > /tmp/MoodlePush0601pm.txt 2>&1
+01 00 * * * /storage/Production_Scripts/REG_Scripts/REG_Moodle_ADM_Df_Master.shl > /tmp/MoodlePush1201am 2>&1
+13 07 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_Grade_Unroll_Master.shl > /dev/null 2>&1
+13 11 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_Grade_Unroll_Master.shl > /dev/null 2>&1
+13 15 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_Grade_Unroll_Master.shl > /dev/null 2>&1
+00 08 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_TranscriptRequestRemove_Master.shl > /dev/null 2>&1
+30 13 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_TranscriptRequestRemove_Master.shl > /dev/null 2>&1
+35 01 * * * /storage/Production_Scripts/REG_Scripts/REG_OnLine_Course_Notification_Master.shl > /dev/null 2>&1
+01 11 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_TransferCredits_Master.shl > /dev/null 2>&1
+01 15 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_TransferCredits_Master.shl > /dev/null 2>&1
+01 11 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_Historical_Instructor_Update_Master.shl > /dev/null 2>&1
+01 18 * * 1,2,3,4,5 /storage/Production_Scripts/REG_Scripts/REG_Historical_Instructor_Update_Master.shl > /dev/null 2>&1
+31 18 * * * /storage/Production_Scripts/REG_Scripts/REG_ProxyAccess_Student_Master.shl > /dev/null 2>&1
+
+#
+# -- Residential Life Scripts
+#
+# NOTE: No scripts can run at during the following times
+#            8:00am   to 8:30am
+#           12:00noon to 12:30pm
+#            6:00pm   to 6:30pm
+#
+
+10 08 * * * /storage/Production_Scripts/RL_Scripts/REH_ParameterText_Moving_Master.shl > /tmp/todResLifeParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/RL_Scripts/REH_ParameterText_Moving_Master.shl > /tmp/todResLifeParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/RL_Scripts/REH_ParameterText_Moving_Master.shl > /tmp/todResLifeParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/RL_Scripts/REH_ParameterText_Moving_Master.shl > /tmp/todResLifeParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/RL_Scripts/REH_ParameterText_Moving_Master.shl > /tmp/todResLifeParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/RL_Scripts/REH_ParameterText_Moving_Master.shl > /tmp/todResLifeParm.txt 2>&1
+
+# 33 17 * * * /storage/Production_Scripts/RL_Scripts/ResStudentAddrCA_Process2Rebuild.shl > /dev/null 2>&1
+# 33 11 * * * /storage/Production_Scripts/RL_Scripts/ResStudentAddrCA_Process2Rebuild.shl > /dev/null 2>&1
+33 05 * * * /storage/Production_Scripts/RL_Scripts/REH_CA_Address_Build_SLARMAP_Master.shl > /dev/null 2>&1
+00 11 * * * /storage/Production_Scripts/RL_Scripts/REH_CA_Address_Build_SLARMAP_Master.shl > /dev/null 2>&1
+33 17 * * * /storage/Production_Scripts/RL_Scripts/REH_CA_Address_Build_SLARMAP_Master.shl > /dev/null 2>&1
+00 23 * * * /storage/Production_Scripts/RL_Scripts/REH_CA_Address_Build_SLARMAP_Master.shl > /dev/null 2>&1
+# not longer needed Starrez 20150713  13 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/RL_Scripts/RL_SLBRDEF_Occupancy_Count_Master.shl > /dev/null 2>&1
+# no longer needed Starrez 20150713 43 7-18 * * 1,2,3,4,5 /storage/Production_Scripts/RL_Scripts/RL_SLBRDEF_Occupancy_Count_Master.shl > /dev/null 2>&1
+# no longer needed Starrez 20150713 13 7 * * 0 /storage/Production_Scripts/RL_Scripts/RL_SLBRDEF_Occupancy_Count_Master.shl > /dev/null 2>&1
+# no longer needed Starrez 20150713 13 7 * * 6 /storage/Production_Scripts/RL_Scripts/RL_SLBRDEF_Occupancy_Count_Master.shl > /dev/null 2>&1
+19 18 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/RL_Scripts/RL_Update_SLARMAP_Master.shl > /dev/null 2>&1
+# no longer needed Starrez 20150713 13 18 * * 1,2,3,4,5,6 /storage/Production_Scripts/RL_Scripts/RL_Admitted_Deposited_to_SLARMAP_Master.shl > /dev/null 2>&1
+# not needed StarRez 00 11 * * * /storage/Production_Scripts/RL_Scripts/REH_Additional_Housing_Monitor_Master.shl > /dev/null 2>&1
+# not needed StarRez 30 17 * * * /storage/Production_Scripts/RL_Scripts/REH_Additional_Housing_Monitor_Master.shl > /dev/null 2>&1
+03 02 * * 0,1,2,3,4,5,6 /storage/Production_Scripts/RL_Scripts/RL_Maxient_Master.shl > /dev/null 2>&1
+# Retired 01 06-23 * * * /storage/Production_Scripts/RL_Scripts/RL_Living_Choice_Signup_Master.shl > /dev/null 2>&1 > /tmp/todREHHAppl1.txt
+# Retired 16 06-23 * * * /storage/Production_Scripts/RL_Scripts/RL_Living_Choice_Signup_Master.shl > /dev/null 2>&1 > /tmp/todREHHAppl2.txt
+# Retired 31 06-23 * * * /storage/Production_Scripts/RL_Scripts/RL_Living_Choice_Signup_Master.shl > /dev/null 2>&1 > /tmp/todREHHAppl3.txt
+# Retired 46 06-23 * * * /storage/Production_Scripts/RL_Scripts/RL_Living_Choice_Signup_Master.shl > /dev/null 2>&1 > /tmp/todREHHAppl4.txt
+# Retired 46 17 * * 0,1,2,3,4,5 /storage/Production_Scripts/RL_Scripts/REH_FYS_Housing_Announce_Email_Master.shl > /dev/null 2>&1 > /tmp/todREH18.txt
+# no longer needed 06 14 * * 0,1,2,3,4,5 /storage/Production_Scripts/RL_Scripts/REH_Housing_Agreement_Notify_Master.shl > /dev/null 2>&1 > /tmp/todREH16.txt
+#O11G 30 17 * * * /storage/Production_Scripts/RL_Scripts/RL_Fall_Email_Housing_Announce_Master.shl > /dev/null 2>&1 > /tmp/todREHAnno.txt
+
+#03 07 * * * /storage/Production_Scripts/RL_Scripts/SNCROOMMATEScurrentSnapshotProcess.shl > /dev/null 2>&1
+#03 08 * * * /storage/Production_Scripts/RL_Scripts/SNCROOMMATEScurrentSnapshotProcess.shl > /dev/null 2>&1
+#03 12 * * * /storage/Production_Scripts/RL_Scripts/SNCROOMMATEScurrentSnapshotProcess.shl > /dev/null 2>&1
+#03 16 * * * /storage/Production_Scripts/RL_Scripts/SNCROOMMATEScurrentSnapshotProcess.shl > /dev/null 2>&1
+#03 17 * * * /storage/Production_Scripts/RL_Scripts/SNCROOMMATEScurrentSnapshotProcess.shl > /dev/null 2>&1
+# 13 18 * * 1,2,3,4,5 /storage/Production_Scripts/RL_Scripts/RL_Housing_Contract_AcadYr_Master.shl > /dev/null 2>&1
+# tmm 04/28/2008  13 18 * * 1,2,3,4,5 /storage/Production_Scripts/RL_Scripts/RL_Housing_Contracts_SpringTerm_Master.shl > /dev/null 2>&1
+# tod 09/01/2010 mike email 17 18 * * 1,2,3,4,5 /storage/Production_Scripts/RL_Scripts/RL_Housing_Contracts_FallTerm_Master.shl > /tmp/todfalltermreh.txt 2>&1
+#13 18 * 05,06,07 * /storage/Production_Scripts/RL_Scripts/RL_Housing_Contracts_Summer_Master.shl
+# Retired 13 07 * * 1,2,3,4,5 /storage/Production_Scripts/RL_Scripts/RL_Lottery_Numbers_Master.shl > /dev/null 2>&1
+# not needed StarRez 00 06-23 * * * /storage/Production_Scripts/RL_Scripts/RL_Deposits_VerifyUpdate_Master.shl > /dev/null 2>&1
+# not needed StarRez 15 06-23 * * * /storage/Production_Scripts/RL_Scripts/RL_Deposits_VerifyUpdate_Master.shl > /dev/null 2>&1
+# not needed StarRez 45 06-23 * * * /storage/Production_Scripts/RL_Scripts/RL_Deposits_VerifyUpdate_Master.shl > /dev/null 2>&1
+# not needed StarRez 45 16 * * * /storage/Production_Scripts/RL_Scripts/REH_Deposit_Reminder_Email_Master.shl > /dev/null 2>&1
+# not needed StarRez 00 06 * * * /storage/Production_Scripts/RL_Scripts/REH_Housing_Early_Arrival_Mass_Master.shl > /dev/null 2>&1
+# not needed StarRez 00 09 * * * /storage/Production_Scripts/RL_Scripts/REH_Housing_Early_Arrival_Mass_Master.shl > /dev/null 2>&1
+# not needed StarRez 00 11 * * * /storage/Production_Scripts/RL_Scripts/REH_Housing_Early_Arrival_Mass_Master.shl > /dev/null 2>&1
+# not needed StarRez 00 15 * * * /storage/Production_Scripts/RL_Scripts/REH_Housing_Early_Arrival_Mass_Master.shl > /dev/null 2>&1
+# not needed StarRez 00 01 * * * /storage/Production_Scripts/RL_Scripts/REH_Checkin_Numbers_Master.shl > /dev/null 2>&1
+
+# per cathy on feb 22 2012 13 06 * * 5 /storage/Production_Scripts/RL_Scripts/RL_Housing_Contract_Notify_Master.shl > /dev/null 2>&1 > /tmp/todREHHN.txt
+
+#
+# -- Computer Services Scripts
+#
+13 19 * * 5 /storage/Production_Scripts/CS_Scripts/Shutdown_AR_Sleepwake_Process.shl > /dev/null 2>&1
+
+# turn Educator_Master_Script.shl back on per Scott request 2-17-2014
+13 18 * * * /storage/Production_Scripts/CS_Scripts/Educator_Master_Script.shl > /tmp/todeducator.txt > /dev/null 2>&1
+03 00 * * * /storage/Production_Scripts/CS_Scripts/GTVSDAX_SNCCURDATE.shl > /dev/null 2>&1
+13 04 * * 0,1,2,3,4 /storage/Production_Scripts/CS_Scripts/GoatPad_Master_Inactive_to_Active.shl > /dev/null 2>&1
+35 06 * * 5,6 /storage/Production_Scripts/CS_Scripts/GoatPad_Master_Inactive_to_Active.shl > /dev/null 2>&1
+03 12 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_Master_Script.shl > /dev/null 2>&1
+03 18 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_Master_Script.shl > /dev/null 2>&1
+03 23 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_Master_Script.shl > /dev/null 2>&1
+03 06 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_Disable_Process_Master.shl > /tmp/toddisable.txt > /dev/null 2>&1
+13 06 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_Master_Script.shl > /dev/null 2>&1
+15 00 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_Random_Id_Master.shl > /dev/null 2>&1
+30 02 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_Master_Script.shl > /dev/null 2>&1
+# -- These script times must follow when Rob delivery the data file
+20 01 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_EmailServer_Active_Master.shl > /dev/null 2>&1
+20 07 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_EmailServer_Active_Master.shl > /dev/null 2>&1
+20 13 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_EmailServer_Active_Master.shl > /dev/null 2>&1
+20 19 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_EmailServer_Active_Master.shl > /dev/null 2>&1
+# -- End this must follow...
+33 07 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/LogAcct_Reset_Goatpac_AdmStu_New_Master.shl > /dev/null 2>&1
+15 22 * * * /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/BroadList_Master_Script.shl > /dev/null 2>&1
+# tmm 20130705 03 23 * * 0,1,2,3,4,5 /storage/Production_Scripts/CS_Scripts/Login_Broadcast_Storage/SNC_Dept_Profile_Master_Script.shl
+#29 07 11 06 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0020 061115 N
+#29 07 13 06 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0021 061315 N
+#29 07 17 06 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0022 061715 N
+#29 07 19 06 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0023 061915 N
+# retire 59 12 20 08 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0025 010101 N
+#35 16 11 06 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0020 06142015 Y
+#35 16 13 06 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0021 06182015 Y
+#35 16 17 06 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0022 06212015 Y
+#35 16 19 06 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0023 06292015 Y
+# retire 01 15 20 08 * /storage/Production_Scripts/CS_Scripts/GoatPad_Temp_Active_Orientation_Groups.shl A0025 01010101 Y
+01 11 * * * /storage/Production_Scripts/Checking_Scripts/CS_County_Update.shl > /tmp/todcounty.txt > /dev/null 2>&1
+01 18 * * * /storage/Production_Scripts/Checking_Scripts/CS_County_Update.shl > /tmp/todcounty.txt > /dev/null 2>&1
+
+#
+# -- Noel Levitz Scripts
+#
+35 18 * * 0,1,2,3,4,5 /storage/Production_Scripts/NoelLevitz_Scripts/NLREMS_Master_Script.shl > /dev/null 2>&1
+
+#
+# -- Data Warehouse type of reports
+#
+
+43 19 * * 0,1,2,3,4,5 /storage/Production_Scripts/DataWH_Scripts/DataWH_Master_Process.shl > /dev/null 2>&1
+
+#
+# -- Admissions (ADM) see/update project number xxxx if you are putting in a job that will run or starts after 8:00pm or
+#                   or starts before 6:00am.
+# NOTE: No scripts can run at during the following times
+#            8:00am   to 8:30am
+#           12:00noon to 12:30pm
+#            6:00pm   to 6:30pm
+#
+
+10 08 * * * /storage/Production_Scripts/ADM_Scripts/ADM_ParameterText_Moving_Master.shl > /tmp/todADMParm.txt 2>&1
+25 08 * * * /storage/Production_Scripts/ADM_Scripts/ADM_ParameterText_Moving_Master.shl > /tmp/todADMParm.txt 2>&1
+10 12 * * * /storage/Production_Scripts/ADM_Scripts/ADM_ParameterText_Moving_Master.shl > /tmp/todADMParm.txt 2>&1
+25 12 * * * /storage/Production_Scripts/ADM_Scripts/ADM_ParameterText_Moving_Master.shl > /tmp/todADMParm.txt 2>&1
+10 18 * * * /storage/Production_Scripts/ADM_Scripts/ADM_ParameterText_Moving_Master.shl > /tmp/todADMParm.txt 2>&1
+25 18 * * * /storage/Production_Scripts/ADM_Scripts/ADM_ParameterText_Moving_Master.shl > /tmp/todADMParm.txt 2>&1
+
+#
+# -- Admissions Database Adjustment Scripts
+#
+
+# -- Web Application from Banner to SalesForce
+15 00 * * * /storage/Production_Scripts/ADM_Scripts/CS_SalesForce_SNC_Applications_Master.shl > /dev/null 2>&1
+# tod 02-07-2014 13 07 * * 1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_SalesForce_Deposit_Send_Master.shl > /dev/null 2>&1
+# tod 02-07-2014 13 12 * * 1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_SalesForce_Deposit_Send_Master.shl > /dev/null 2>&1
+# tod 02-07-2014 13 19 * * 1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_SalesForce_Deposit_Send_Master.shl > /dev/null 2>&1
+#
+# -- End Special Banner to SalesForce and SalesForce to Banner Scripts
+#
+
+# tod 01-27-2014 03 15 * * 0,1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_WebAppl_ConvertQuest_Master.shl > /dev/null 2>&1
+# tod 01-27-2014 03 14 * * 0,1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_WebAppl_ConvertQuest_Master.shl > /dev/null 2>&1
+# tod 01-27-2014 33 13 * * 0,1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_WebAppl_ConvertQuest_Master.shl > /dev/null 2>&1
+# tod 01-27-2014 33 12 * * 0,1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_WebAppl_ConvertQuest_Master.shl > /dev/null 2>&1
+# tod 01-27-2014 03 11 * * 0,1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_WebAppl_ConvertQuest_Master.shl > /dev/null 2>&1
+# tod 01-27-2014 03 10 * * 0,1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_WebAppl_ConvertQuest_Master.shl > /dev/null 2>&1
+# tod 01-27-2014 03 07 * * 0,1,2,3,4,5 /storage/Production_Scripts/ADM_Scripts/ADM_WebAppl_ConvertQuest_Master.shl > /dev/null 2>&1
+
+#
+# -- Admissions Letter Generation Scripts
+#
+
+# tod 01-27-2014 14 19 * * 0,2,4 /storage/Production_Scripts/ADM_Scripts/ADM_MDF_Admitted_Letters.shl > /tmp/todadmmdfadmitteddump.txt
+# tod 01-27-2014 18 19 * * 0,2,4 /storage/Production_Scripts/ADM_Scripts/ADM_MDF_Deposit_Received_Letter.shl > /dev/null 2>&1
+# tod 01-27-2014 54 19 * * 0,2,4 /storage/Production_Scripts/ADM_Scripts/ADM_MDF_Admitted_Transfers_Readmits_Letters.shl > /dev/null 2>&1
+# tod 01-27-2014 59 19 * 10,11,12,1,2,3,4,5,6,7,8 0,2,4 /storage/Production_Scripts/ADM_Scripts/ADM_MDF_Denied_Letters.shl > /dev/null 2>&1
+# tod 01-27-2014 51 19 * * 0,2,4 /storage/Production_Scripts/ADM_Scripts/ADM_MDF_Ltr_Postponed_Letter.shl > /dev/null 2>&1
+
+#
+# -- ITSEA DBA Scripts
+#
+# retired 13 00 * * * /home/sworker/SNC_Management_Scripts/Cloning_Backup_SworkerHome_Production.shl > /tmp/ITSEADBA_Cloning_Backup.txt 2>&1
+

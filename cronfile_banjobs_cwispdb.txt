@@ -1,0 +1,7 @@
+# owner banjobs
+#
+# -- Starting Banner Jobs Environment
+#
+# Tod 45 02 * * 6 /storage/u04/banjobs/bin/gurstop_CWIS8P.shl > /tmp/todgurstop.txt
+# Tod 05 04 * * 6 /storage/u04/banjobs/bin/gurstart_CWIS8P.shl > /tmp/todgurstart.txt
+0 5 * * * /storage/u04/banjobs/local/bin/restart_everything_all > /storage/u04/banjobs/local/bin/restart_everything_all.log
